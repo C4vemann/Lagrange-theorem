@@ -28,7 +28,7 @@ def slope(x, y1, y2, y3):
     print(numerator/denominator);
     return numerator / denominator
 
-
+#recursive function that iterates through its set of bounds
 def additionRecursive(df, length, lowerBound, upperBound, missingValue):
     firstTerm = multiplyRecursive(df, length, 0, lowerBound - 1, lowerBound, missingValue)
 
@@ -38,7 +38,7 @@ def additionRecursive(df, length, lowerBound, upperBound, missingValue):
 
     return output
 
-# a recursive function that iterates through the set bounds
+#recursive function that iterates through its set of bounds
 def multiplyRecursive(df, length, lowerBound, upperBound, index, missingValue):
     if lowerBound == upperBound:
         return slope(df.iloc[missingValue, 0], df.iloc[lowerBound, 0], df.iloc[index, 0], df.iloc[lowerBound, 0])
